@@ -53,7 +53,7 @@ const List = () => {
             return (
               <Todo key={todo.id}>
                 <StyledLink to={`/${todo.id}`}>
-                  <DetailLink>상세보기</DetailLink>
+                  <DetailLink>🔍</DetailLink>
                 </StyledLink>
                 <Content>
                   <TodoTitle>{todo.title}</TodoTitle>

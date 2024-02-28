@@ -30,3 +30,8 @@ src/
 |-- index.js
 +-- ...
 ```
+
+
+## 배포사이트
+
+  https://redux-todo-l244vrn3o-zooks-projects-4b2f2689.vercel.app/

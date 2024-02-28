@@ -38,21 +38,23 @@ const Form = () => {
 
   return (
     <form onSubmit={onSubmitHandler} className="form-container">
-      <label className="form-label">제목</label>
+      <label className="form-label"></label>
       <input
         type="text"
         name="title"
         value={todo.title}
         onChange={onChangeHandler}
         className="form-input"
+        placeholder="제목"
       />
-      <label className="form-label">내용</label>
+      <label className="form-label"></label>
       <input
         type="text"
         name="body"
         value={todo.body}
         onChange={onChangeHandler}
         className="form-input"
+        placeholder="내용"
       />
       <button type="submit" className="submit-button">
         추가하기

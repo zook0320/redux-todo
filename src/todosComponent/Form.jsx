@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/modules/todos";
-
+import styled from "styled-components";
 
 const generateUniqueId = () => {
   const date = new Date();
@@ -18,6 +18,7 @@ const Form = () => {
     body: "",
     isDone: false,
   });
+
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
     setTodo({ ...todo, [name]: value });
@@ -37,30 +38,51 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={onSubmitHandler} className="form-container">
-      <label className="form-label"></label>
-      <input
+    <StyledForm onSubmit={onSubmitHandler}>
+
+      <Input
         type="text"
         name="title"
         value={todo.title}
         onChange={onChangeHandler}
-        className="form-input"
         placeholder="제목"
       />
-      <label className="form-label"></label>
-      <input
+
+      <Input
         type="text"
         name="body"
         value={todo.body}
         onChange={onChangeHandler}
-        className="form-input"
         placeholder="내용"
       />
-      <button type="submit" className="submit-button">
-        추가하기
-      </button>
-    </form>
+      <SubmitButton type="submit">add</SubmitButton>
+    </StyledForm>
   );
 };
 
 export default Form;
+
+const StyledForm = styled.form`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`;
+
+
+const Input = styled.input`
+  padding: 8px;
+  margin-right: 16px;
+`;
+
+const SubmitButton = styled.button`
+  padding: 8px;
+  background-color: #ff9696;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #88d899;
+  }
+`;

@@ -98,7 +98,7 @@ margin: 0;
 border: 1px solid #69535c;
   background-color: #88d899;
   border-bottom: none;
-  border-top: ;
+  border-top: none;
   padding: 10px;
 `;
 
@@ -107,6 +107,7 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  padding-bottom: 10%;
   background-color: #ffefef;
   border: 1px solid #69535c;
 `;
@@ -151,10 +152,10 @@ const DeleteButton = styled.button`
   border-radius: 8px;
   padding: 8px 16px;
   cursor: pointer;
-  background-color: #ff3e8e;
+  background-color: #ff9696;
 
   &:hover {
-    background-color: #ff9191;
+    background-color: #ff4d4d;
   }
 `;
 

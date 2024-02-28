@@ -12,7 +12,7 @@ const Header = () => {
 export default Header;
 
 const StContainer = styled.div`
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   height: 60px;
   display: flex;
   justify-content: space-between;
